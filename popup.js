@@ -114,10 +114,17 @@ function renderRows(ghosts, query) {
     a.target = "_blank";
     a.rel = "noopener";
 
-    const img = document.createElement("img");
-    img.src = u.pic;
-    img.alt = "";
-    img.loading = "lazy";
+    // Replace the img element creation inside renderRows with this:
+    const img = document.createElement(u.pic ? "img" : "div");
+    if (u.pic) {
+      img.src = u.pic; // now base64, loads fine from extension context
+      img.alt = "";
+      img.loading = "lazy";
+    } else {
+      // fallback initial avatar if pic fetch failed
+      img.className = "avatar-fallback";
+      img.textContent = u.username[0].toUpperCase();
+    }
 
     const names = document.createElement("div");
     names.className = "names";
