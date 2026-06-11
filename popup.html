@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="title-row">
+      <h1>Ghost Check</h1>
+      <span id="scanned-at" class="scanned-at"></span>
+    </div>
+    <p class="tagline">Following them. Not followed back.</p>
+  </header>
+
+  <section id="stats" class="stats hidden">
+    <div class="stat">
+      <span class="stat-num" id="stat-following">–</span>
+      <span class="stat-label">following</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="stat-followers">–</span>
+      <span class="stat-label">followers</span>
+    </div>
+    <div class="stat accent">
+      <span class="stat-num" id="stat-ghosts">–</span>
+      <span class="stat-label">ghosts</span>
+    </div>
+  </section>
+
+  <div id="status" class="status"></div>
+
+  <div class="controls">
+    <button id="scan-btn">Scan my account</button>
+    <button id="export-btn" class="ghost-btn hidden">Export CSV</button>
+  </div>
+
+  <input id="filter" class="filter hidden" type="text" placeholder="Filter by username…" />
+
+  <ul id="results" class="results"></ul>
+
+  <footer>
+    Runs in your browser only. Scan occasionally, not repeatedly — Instagram rate-limits heavy use.
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
