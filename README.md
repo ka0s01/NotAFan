@@ -1,8 +1,7 @@
 # NotAFan 👻
 
-Don't you hate it when someone unfollows you but keeps you following them? 
-Like they want the number but not the relationship. Who do they think they 
-are — do they think you're a fan?
+Don't you hate it when someone unfollows you but keeps you following them? Who do they think they 
+are, do they think you're a fan?
 
 **NotAFan** is a Chrome extension that shows you everyone you follow on 
 Instagram who doesn't follow you back. No sketchy apps, no handing over 
